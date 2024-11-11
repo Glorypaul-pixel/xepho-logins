@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="regComplete" id="section1">
+      <div class="regCompleteImg">
+        <h1>Manage your course and team in an easy way</h1>
+        <img src="./images/regImg.png" alt="Registration" />
+      </div>
+      <div class="regCompleteContent">
+        <div>
+          <div class="progress-bar">
+            <div class="step active"><div class="stepInner"></div></div>
+            <hr />
+            <div class="step active"></div>
+            <hr />
+            <div class="step active"></div>
+            <hr />
+            <div class="step active"></div>
+          </div>
+          <form id="companyForm" action="javascript:void(0);">
+            <h3>Tell us about your company</h3>
+            <p>Who are you? What's your company or organization all about?</p>
+            <div class="companyDetails">
+              <label for="name">Your Company Name</label>
+              <input
+                type="text"
+                placeholder="Input your Company Name here"
+                id="name"
+                required
+              />
+            </div>
+            <div class="companyDetails">
+              <label for="description">Your Company Description</label>
+              <input
+                type="text"
+                placeholder="Describe your company here"
+                id="description"
+                required
+              />
+            </div>
+            <div class="employeeNum">
+              <h4>How many Employees?</h4>
+              <div class="staffNum">
+                <label
+                  ><input
+                    type="radio"
+                    name="staffNumber"
+                    value="1-10"
+                    required
+                  />
+                  <div class="option-box"><p>1-10</p></div></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="staffNumber"
+                    value="10-20"
+                    required
+                  />
+                  <div class="option-box"><p>10-20</p></div></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="staffNumber"
+                    value="20-30"
+                    required
+                  />
+                  <div class="option-box"><p>20-30</p></div></label
+                >
+              </div>
+            </div>
+            <button type="submit" class="regComplete_btn">Next</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="regComplete" id="section2" style="display: none">
+      <div class="regnum">
+        <div class="regCompleteImg">
+          <h1>Manage your course and team in an easy way</h1>
+          <img src="./images/regImg.png" alt="Registration" />
+        </div>
+        <div class="regCompleteContent">
+          <div>
+            <h3>Complete your company profile</h3>
+            <div class="profile">
+              <div class="profile-image-container">
+                <img
+                  id="profileImage"
+                  src="./images/profile.png"
+                  alt="Profile Image"
+                />
+              </div>
+              <div class="profileContent">
+                <p>Select your company profile</p>
+                <button
+                  class="browseBtn"
+                  onclick="document.getElementById('fileInput').click()"
+                >
+                  Browse
+                </button>
+                <input
+                  type="file"
+                  id="fileInput"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <form class="companyDescription">
+              <div class="row">
+                <label for="">Your Company Description</label>
+                <input
+                  type="text"
+                  id="companyDescription"
+                  placeholder="Tell me about your Company look like"
+                />
+              </div>
+              <div class="row">
+                <label for="">Your Company Location</label>
+                <input
+                  type="text"
+                  id="companyLocation"
+                  placeholder="Where is your Company located"
+                />
+              </div>
+              <button
+                type="button"
+                class="regComplete_btn"
+                id="submitBtn2"
+                disabled
+              >
+                Next
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="regComplete" id="section3" style="display: none">
+      <div class="regnum">
+        <div class="regCompleteImg">
+          <h1>Manage your course and team in an easy way</h1>
+          <img src="./images/regImg.png" alt="Registration" />
+        </div>
+        <div class="regCompleteContent">
+          <div>
+            <h3>What's your interest?</h3>
+            <p>We want to know what you intend to use Xepho for</p>
+            <form id="interestForm" action="javascript:void(0);">
+              <div class="interest">
+                <input type="checkbox" name="interest" id="Interest1" />
+                <p>To publish course & earn money as a course creator</p>
+              </div>
+              <div class="interest">
+                <input type="checkbox" name="interest" id="Interest2" />
+                <p>To publish course & earn money as a course creator</p>
+              </div>
+              <div class="interest">
+                <input type="checkbox" name="interest" id="Interest3" />
+                <p>To publish course & earn money as a course creator</p>
+              </div>
+              <div class="row">
+                <label for="option">Other Option</label
+                ><input
+                  class="option"
+                  type="text"
+                  id="otherOption"
+                  placeholder="input your option"
+                />
+              </div>
+              <button type="submit" class="regComplete_btn" id="submitBtn3">
+                Next
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="regComplete" id="section4" style="display: none">
+      <div class="regnum">
+        <div class="regCompleteImg">
+          <h1>Manage your course and team in an easy way</h1>
+          <img src="./images/regImg.png" alt="Registration" />
+        </div>
+        <div class="regCompleteContent">
+          <div>
+            <h3>Registration Completed</h3>
+            <button class="regComplete_btn">Continue to Dashboard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("companyForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("section1").style.display = "none";
+          document.getElementById("section2").style.display = "block";
+        });
+
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function () {
+          const file = this.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              document.getElementById("profileImage").src = e.target.result;
+              validateForm();
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+      function validateForm() {
+        const description = document
+          .getElementById("companyDescription")
+          .value.trim();
+        const location = document
+          .getElementById("companyLocation")
+          .value.trim();
+        const profileImage = document
+          .getElementById("profileImage")
+          .src.includes("data:");
+        const isValid = description !== "" && location !== "" && profileImage;
+        document.getElementById("submitBtn2").disabled = !isValid;
+      }
+
+      document
+        .getElementById("submitBtn2")
+        .addEventListener("click", function () {
+          document.getElementById("section2").style.display = "none";
+          document.getElementById("section3").style.display = "block";
+        });
+
+      document
+        .getElementById("interestForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const checkboxes = document.querySelectorAll(
+            'input[type="checkbox"]'
+          );
+          const otherOptionInput = document.getElementById("otherOption");
+          let checked = Array.from(checkboxes).some(
+            (checkbox) => checkbox.checked
+          );
+
+          if (checked || otherOptionInput.value.trim() !== "") {
+            document.getElementById("section3").style.display = "none";
+            document.getElementById("section4").style.display = "block";
+          } else {
+            alert("Please select at least one interest or provide an option.");
+          }
+        });
+    </script>
+  </body>
+</html>

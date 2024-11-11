@@ -1,0 +1,499 @@
+/* SIGN IN CONTENT */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.signin {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+.signinImg {
+  margin-left: 4rem;
+  width: 50%;
+}
+.signinLink {
+  padding: 0 0 0 0.5rem;
+}
+.signinDetails {
+  background-color: white;
+  padding: 3rem;
+  width: 50%;
+  height: 100%;
+  flex: 1;
+}
+
+.signinDetails h1 {
+  padding-bottom: 2rem;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.row label {
+  padding-bottom: 0.4 rem;
+  font-weight: 600;
+}
+.row input {
+  padding: 1rem;
+  border: 1px solid #ff7f00;
+  border-radius: 0.5rem;
+}
+
+.signin_btn button {
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ff7f00;
+}
+.signin_btn p {
+  color: #9a9ab0;
+  padding: 0 0.5rem;
+}
+.signin_google button {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ff7f00;
+  font-size: 1rem;
+  background-color: white;
+  width: 100%;
+  font-weight: 700;
+  border: solid 3px #ff7f00;
+}
+
+.signup {
+  padding-top: 1.5rem;
+}
+
+.signupLink {
+  color: #ff7f00;
+  font-weight: 700;
+}
+
+.signinDetails a {
+  text-decoration: none;
+}
+
+/* CREATE ACCOUNT DETAILS STYLING */
+.createAccount {
+  display: flex;
+  width: 100%;
+  background-color: #e5e5e5;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.createAccountImg {
+  width: 20%;
+  margin-left: 2rem;
+}
+.createAccountDetails {
+  background-color: white;
+  padding: 3rem;
+  width: 50%;
+}
+
+.createAccountDetails h1 {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
+.row label {
+  padding-bottom: 0.4rem;
+}
+
+.createAccountDetails a {
+  text-decoration: none;
+}
+
+.terms {
+  display: flex;
+}
+.terms input[type="checkbox"] {
+  accent-color: #ff7f00;
+}
+
+.terms input[type="checkbox"]:checked {
+  accent-color: #ff7f00;
+}
+
+.terms input[type="checkbox"]::after {
+  color: white;
+}
+
+.terms p {
+  color: #9a9ab0;
+}
+
+.createAccount_btn button {
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ff7f00;
+}
+
+.createAccount_btn p {
+  color: #9a9ab0;
+}
+
+.createAccount_google button {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ff7f00;
+  font-size: 1rem;
+  background-color: white;
+  width: 100%;
+  font-weight: 700;
+  border: 3px solid #ff7f00;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  color: #9a9ab0;
+}
+
+.signup {
+  padding-top: 1.5rem;
+}
+
+.CreatesigninLink {
+  color: #ff7f00;
+  font-weight: 700;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.createAccount_btn,
+.createAccount_google {
+  width: 100%;
+}
+
+/* Third Registration */
+.interest {
+  padding: 0.1rem 0;
+}
+
+/* Style the checkbox */
+
+.interest input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff7f00;
+  accent-color: #ff7f00;
+  cursor: pointer;
+}
+
+.interest input[type="checkbox"]:checked {
+  accent-color: #ff7f00;
+  color: white;
+}
+
+.interest {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.interest p {
+  margin-left: 10px;
+}
+
+.interest p {
+  color: #9a9ab0;
+}
+.option {
+  width: 30rem;
+}
+/* Company Profile */
+.profile {
+  display: flex;
+  gap: 10px;
+}
+.profileContent {
+  position: relative;
+  top: 15px;
+}
+.companyDescription {
+  margin: 3rem 0;
+}
+.browseBtn {
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.companyDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.companyDetails label {
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+}
+.companyDetails input {
+  padding: 1rem;
+  border: 1px solid #ff7f00;
+  border-radius: 0.5rem;
+}
+.staffNum {
+  display: flex;
+  gap: 10px;
+}
+.employeeNum h4 {
+  font-size: 15px;
+}
+.staffNum div {
+  border: 1px solid #ff7f00;
+  border-radius: 7px;
+  padding: 0px 20px;
+  color: #ff7f00;
+}
+/* Registration Complete */
+.regComplete {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+}
+.regnum {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+}
+
+.regCompleteImg {
+  width: 40%;
+  padding: 2rem;
+}
+.regCompleteImg h1 {
+  font-size: 40px;
+}
+.regCompleteContent {
+  width: 60%;
+  background-color: #fff;
+  padding: 4rem;
+}
+.progress-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 2rem;
+}
+
+.stepInner {
+  width: 15px;
+  height: 15px;
+  background-color: #ff8c00;
+  border-radius: 45%;
+}
+
+.step {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid #ff8c00;
+  border-radius: 50%;
+  padding: 0.4rem 0.1rem 0.1rem 0.4rem;
+}
+
+hr {
+  width: 5rem;
+  height: 0.1rem;
+  background-color: #ff7f00;
+  border: 2px solid #ff7f00;
+}
+
+.regCompleteContent h3 {
+  font-size: 30px;
+}
+.regComplete_btn {
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+/* Forgot Password */
+.forgotPw {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+.forgotPw Img {
+  padding: 2rem;
+}
+.regCompleteImg h1 {
+  font-size: 40px;
+}
+.forgotPWContent {
+  width: 60%;
+  background-color: #fff;
+  padding: 4rem;
+}
+
+.forgotPWform {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.forgotPWform label {
+  padding-bottom: 0.4 rem;
+  font-weight: 600;
+}
+.forgotPWform input {
+  padding: 1rem;
+  border: 1px solid #ff7f00;
+  border-radius: 0.5rem;
+}
+
+/* STAFF NUMBER */
+
+.staffNum {
+  display: flex;
+  gap: 10px;
+}
+.staffNum label {
+  cursor: pointer;
+}
+.option-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.option-box p {
+  margin: 0;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .option-box {
+  background-color: #ff7f00; 
+  border-color: #ff7f00;
+  color: white;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile-image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden; 
+}
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.profileContent .browseBtn {
+  background-color: #ff7f00;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.profileContent .browseBtn:hover {
+  background-color: #ff9f33;
+}
+@media (max-width: 1200px) {
+  .createAccountDetails {
+    width: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .createAccount {
+    display: flex;
+  }
+  .createAccountDetails {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .signinImg {
+    display: none;
+  }
+
+  .signinDetails h1 {
+    padding-bottom: 2rem;
+    font-weight: 700;
+  }
+  .createAccount {
+    align-items: center;
+    background-color: white;
+  }
+  .createAccountImg {
+    display: none;
+  }
+  .createAccountDetails {
+    width: 100%;
+  }
+  .regComplete {
+    flex-direction: column;
+  }
+  .regCompleteImg {
+    display: none;
+  }
+  .regCompleteContent {
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem;
+    flex-direction: column;
+  }
+  .forgotPw {
+    flex-direction: column;
+  }
+  .forgotPWContent {
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+  }
+  .forgotPw img {
+    display: none;
+  }
+  .forgotPWform {
+    padding: 2rem 0;
+  }
+  .forgotPWform input {
+    width: 100%;
+  }
+}

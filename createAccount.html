@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="createAccount">
+      <div class="createAccountImg">
+        <img src="./images/signUp.png" alt="Create Account" />
+      </div>
+      <div class="createAccountDetails">
+        <h1>Create your account</h1>
+        <form id="createAccountForm">
+          <div class="row">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder="Input your name here"
+              id="name"
+              required
+            />
+          </div>
+          <div class="row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              placeholder="Input your email here"
+              id="email"
+              required
+            />
+          </div>
+          <div class="row">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Input your password here"
+              required
+              minlength="8"
+              pattern="(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}"
+              title="Password must be at least 8 characters and include at least one symbol (e.g., !, @, #)"
+            />
+          </div>
+          <div class="row">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm your password here"
+              required
+            />
+          </div>
+          <small id="passwordError" style="color: red; display: none">
+            Passwords do not match.
+          </small>
+
+          <div class="interest">
+            <input type="checkbox" id="Terms" required />
+            <p>I have read and agree to the Terms of Service</p>
+          </div>
+
+          <div class="createAccount_btn">
+            <button type="submit">Create Account</button>
+          </div>
+
+          <h5 class="option">or</h5>
+
+          <div class="createAccount_google">
+            <button type="button">Sign up with Google</button>
+          </div>
+
+          <p class="CreateSignin">
+            Already have an account?
+            <a href="./index.html" class="CreatesigninLink">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("createAccountForm")
+        .addEventListener("submit", function (event) {
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const passwordError = document.getElementById("passwordError");
+
+          // Check if passwords match
+          if (password !== confirmPassword) {
+            event.preventDefault(); // Prevent form submission
+            passwordError.style.display = "block"; // Show error message
+          } else {
+            passwordError.style.display = "none"; // Hide error if passwords match
+          }
+        });
+    </script>
+  </body>
+</html>
