@@ -5,23 +5,25 @@ body {
   font-family: Arial, sans-serif;
 }
 .signin {
-  display: flex;
-  align-items: center;
+  background: url("./images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   padding: 0;
-  background-color: #e5e5e5;
-}
-.signinImg {
-  margin-left: 4rem;
-  width: 50%;
+  /* background-color: #e5e5e5; */
 }
 .signinLink {
   padding: 0 0 0 0.5rem;
 }
 .signinDetails {
-  background-color: white;
-  padding: 3rem;
-  width: 50%;
-  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 5rem;
+  height: 100vh;
   flex: 1;
 }
 
@@ -30,17 +32,18 @@ body {
   font-weight: 700;
 }
 
-.row {
+.signinDetails .row {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
 }
 
-.row label {
-  padding-bottom: 0.4 rem;
+.signinDetails .row label {
+  padding-bottom: 0.4rem;
   font-weight: 600;
 }
-.row input {
+.signinDetails .row input {
+  /* width: 100%; */
   padding: 1rem;
   border: 1px solid #ff7f00;
   border-radius: 0.5rem;
@@ -85,27 +88,41 @@ body {
 
 /* CREATE ACCOUNT DETAILS STYLING */
 .createAccount {
-  display: flex;
-  width: 100%;
-  background-color: #e5e5e5;
-  justify-content: space-between;
+  background-image: url("./images/crreateBackgroung.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding: 0;
+}
+
+.createAccountDetails {
+  background-color: white;
+  padding: 1rem 2rem;
+  width: 50%;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
 
-.createAccountImg {
-  width: 20%;
-  margin-left: 2rem;
+.createAccountDetails h1 {
+  /* padding-bottom: 1rem; */
+  font-weight: 700;
 }
-.createAccountDetails {
-  background-color: white;
-  padding: 3rem;
-  width: 50%;
+.createAccountDetails .row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
-.createAccountDetails h1 {
-  padding-bottom: 1rem;
-  font-weight: 700;
+.createAccountDetails .row label {
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+}
+.createAccountDetails .row input {
+  /* width: 100%; */
+  padding: 0.8rem;
+  border: 1px solid #ff7f00;
+  border-radius: 0.5rem;
 }
 
 .row label {
@@ -131,13 +148,14 @@ body {
   color: white;
 }
 
-.terms p {
+.interest p {
   color: #9a9ab0;
+  font-size: 1rem;
 }
 
 .createAccount_btn button {
   color: white;
-  padding: 1rem;
+  padding: 0.7rem;
   width: 100%;
   border: none;
   font-size: 1rem;
@@ -151,7 +169,7 @@ body {
 
 .createAccount_google button {
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.7rem;
   color: #ff7f00;
   font-size: 1rem;
   background-color: white;
@@ -164,7 +182,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
+  margin: 0.6rem 0;
   color: #9a9ab0;
 }
 
@@ -345,10 +363,12 @@ hr {
 
 /* Forgot Password */
 .forgotPw {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e5e5e5;
+  background-image: url("./images/crreateBackgroung.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
+  padding: 0;
+  overflow: hidden;
 }
 .forgotPw Img {
   padding: 2rem;
@@ -357,9 +377,13 @@ hr {
   font-size: 40px;
 }
 .forgotPWContent {
-  width: 60%;
+  width: 50%;
   background-color: #fff;
   padding: 4rem;
+  padding-top: 10rem;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .forgotPWform {
@@ -404,7 +428,7 @@ input[type="radio"] {
   display: none;
 }
 input[type="radio"]:checked + .option-box {
-  background-color: #ff7f00; 
+  background-color: #ff7f00;
   border-color: #ff7f00;
   color: white;
 }
@@ -417,12 +441,12 @@ input[type="radio"]:checked + .option-box {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .profile-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 .profileContent .browseBtn {
   background-color: #ff7f00;
@@ -435,38 +459,185 @@ input[type="radio"]:checked + .option-box {
 .profileContent .browseBtn:hover {
   background-color: #ff9f33;
 }
-@media (max-width: 1200px) {
-  .createAccountDetails {
-    width: 40%;
+@media (min-width: 2500px) {
+  .signinDetails {
+    padding: 3rem;
+    height: 100vh;
+  }
+  .signin h1 {
+    font-size: 5rem;
+  }
+  .signinDetails .row label {
+    font-size: 3rem;
+  }
+  .signinDetails .row input {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+  .signin_btn button {
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  .signin_btn p {
+    font-size: 2rem;
+  }
+  .signin_google button {
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  .signup {
+    font-size: 2rem;
+  }
+  /* .createAccountDetails {
+    height: 100%;
+  } */
+  .createAccountDetails h1 {
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .createAccountDetails .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  .createAccountDetails .row label {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .createAccountDetails .row input {
+    /* width: 100%; */
+    padding: 2rem;
+    border: 1px solid #ff7f00;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .createAccountDetails .row label {
+    padding-bottom: 0.9rem;
+  }
+
+  .interest p {
+    color: #9a9ab0;
+    font-size: 1.5rem;
+  }
+
+  .createAccount_btn button {
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .createAccount_google button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .option {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .CreateSignin {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  .signup {
+    padding: 2rem 0;
   }
 }
-@media (max-width: 1000px) {
+@media (min-width: 2000px) and (max-width: 2400px) {
+  .signinDetails {
+    padding: 3rem;
+  }
+  .signin h1 {
+    font-size: 4rem;
+  }
+  .row label {
+    font-size: 2rem;
+  }
+  .row input {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+  .signin_btn button {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+  .signin_btn p {
+    font-size: 1rem;
+  }
+  .signin_google button {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  .signup {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1500px) {
   .createAccount {
     display: flex;
   }
   .createAccountDetails {
     width: 40%;
+    height: auto;
+  }
+  .signin {
+    height: 130vh;
   }
 }
 @media (max-width: 800px) {
-  .signinImg {
-    display: none;
-  }
-
   .signinDetails h1 {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     font-weight: 700;
+  }
+  .signinDetails {
+    width: 80%;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  .signin {
+    background-image: none;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .signup {
+    padding-bottom: 2rem;
   }
   .createAccount {
     align-items: center;
+    flex-direction: column;
     background-color: white;
-  }
-  .createAccountImg {
-    display: none;
-  }
-  .createAccountDetails {
+    background-image: none;
     width: 100%;
   }
+
+  .createAccountDetails {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+
+  }
+  #createAccountForm {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .regComplete {
     flex-direction: column;
   }
@@ -480,12 +651,12 @@ input[type="radio"]:checked + .option-box {
     flex-direction: column;
   }
   .forgotPw {
-    flex-direction: column;
+    background-image: none;
   }
   .forgotPWContent {
     background-color: #fff;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
   }
   .forgotPw img {
     display: none;
@@ -494,6 +665,88 @@ input[type="radio"]:checked + .option-box {
     padding: 2rem 0;
   }
   .forgotPWform input {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .signinDetails {
     width: 100%;
+    padding: 4rem;
+  }
+}
+@media (max-width: 380px) {
+  .signinDetails h1 {
+    padding-bottom: 1rem;
+    font-weight: 700;
+  }
+  .signinDetails {
+    width: 80%;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  .signin {
+    background-image: none;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .signup {
+    padding-bottom: 2rem;
+  }
+
+  .regComplete {
+    flex-direction: column;
+  }
+  .regCompleteImg {
+    display: none;
+  }
+  .regCompleteContent {
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem;
+    flex-direction: column;
+  }
+  .forgotPw {
+    background-image: none;
+  }
+  .forgotPWContent {
+    background-color: #fff;
+    flex-direction: column;
+    width: 80%;
+    padding: 5rem 0 0;
+  }
+  .forgotPw img {
+    display: none;
+  }
+  .forgotPWform {
+    padding: 2rem 0;
+  }
+  .forgotPWform input {
+    width: 80%;
+  }
+  .createAccountDetails{
+    flex-direction: column;
+  }
+  .createAccount {
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    background-image: none;
+    width: 100%;
+  }
+
+  .createAccountDetails {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+
+  }
+  #createAccountForm {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
