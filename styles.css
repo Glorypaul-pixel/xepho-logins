@@ -269,16 +269,24 @@ body {
 .companyDetails {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  /* align-items: center; */
   padding: 1rem 0;
 }
-.companyDetails label {
+.companyDescription .row {
+  margin-bottom: 2rem;
+}
+.companyDetails label,
+.companyDescription label {
   padding-bottom: 0.4rem;
   font-weight: 600;
 }
-.companyDetails input {
+.companyDetails input,
+.companyDescription .row input {
   padding: 1rem;
   border: 1px solid #ff7f00;
   border-radius: 0.5rem;
+  /* width: 100%; */
 }
 .staffNum {
   display: flex;
@@ -307,7 +315,9 @@ body {
 
 .regCompleteImg {
   width: 40%;
+  height: 100vh;
   padding: 2rem;
+  background-color: #e5e5e5;
 }
 .regCompleteImg h1 {
   font-size: 40px;
@@ -319,11 +329,22 @@ body {
 }
 .progress-bar {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
   padding-top: 2rem;
 }
-
+.progress-bar1 {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.progress-bar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
 .stepInner {
   width: 15px;
   height: 15px;
@@ -341,7 +362,7 @@ body {
 }
 
 hr {
-  width: 5rem;
+  width: 30%;
   height: 0.1rem;
   background-color: #ff7f00;
   border: 2px solid #ff7f00;
@@ -415,7 +436,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  /* width: 100px; */
   height: 50px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -458,6 +479,99 @@ input[type="radio"]:checked + .option-box {
 }
 .profileContent .browseBtn:hover {
   background-color: #ff9f33;
+}
+@media (min-width: 3500px) {
+  .signinDetails {
+    padding: 3rem;
+    height: 100vh;
+  }
+  .signin h1 {
+    font-size: 5rem;
+  }
+  .signinDetails .row label {
+    font-size: 3rem;
+  }
+  .signinDetails .row input {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+  .signin_btn button {
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  .signin_btn p {
+    font-size: 2rem;
+  }
+  .signin_google button {
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  .signup {
+    font-size: 2rem;
+  }
+  /* .createAccountDetails {
+    height: 100%;
+  } */
+  .createAccountDetails h1 {
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .createAccountDetails .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  .createAccountDetails .row label {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .createAccountDetails .row input {
+    /* width: 100%; */
+    padding: 2rem;
+    border: 1px solid #ff7f00;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .createAccountDetails .row label {
+    padding-bottom: 0.9rem;
+  }
+
+  .interest p {
+    color: #9a9ab0;
+    font-size: 1.5rem;
+  }
+
+  .createAccount_btn button {
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .createAccount_google button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .option {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .CreateSignin {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  .signup {
+    padding: 2rem 0;
+  }
 }
 @media (min-width: 2500px) {
   .signinDetails {
@@ -597,6 +711,7 @@ input[type="radio"]:checked + .option-box {
   }
 }
 @media (max-width: 800px) {
+
   .signinDetails h1 {
     padding-bottom: 1rem;
     font-weight: 700;
@@ -610,10 +725,17 @@ input[type="radio"]:checked + .option-box {
   .signin {
     background-image: none;
   }
-  .row {
+  .companyDetails, .row {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
+  }
+  .companyDetails input, .row input {
+    /* width: 100%; */
+    padding: 1rem;
+    border: 1px solid #ff7f00;
+    border-radius: 0.5rem;
+    /* width: 100%; */
   }
   .signup {
     padding-bottom: 2rem;
@@ -630,7 +752,6 @@ input[type="radio"]:checked + .option-box {
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-
   }
   #createAccountForm {
     justify-content: center;
@@ -638,6 +759,12 @@ input[type="radio"]:checked + .option-box {
     flex-direction: column;
   }
 
+  .companyDetails {
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 1rem; */
+    line-height: .6rem;
+  }
   .regComplete {
     flex-direction: column;
   }
@@ -647,8 +774,17 @@ input[type="radio"]:checked + .option-box {
   .regCompleteContent {
     width: 100%;
     background-color: #fff;
-    padding: 4rem;
+    padding: 1rem;
     flex-direction: column;
+  }
+  .regCompleteContent h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .regComplete_btn {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
   }
   .forgotPw {
     background-image: none;
@@ -666,6 +802,13 @@ input[type="radio"]:checked + .option-box {
   }
   .forgotPWform input {
     width: 80%;
+  }
+  .profile {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profileContent {
+    text-align: center;
   }
 }
 @media (max-width: 600px) {
@@ -688,6 +831,11 @@ input[type="radio"]:checked + .option-box {
   .signin {
     background-image: none;
   }
+  .companyDetails {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
   .row {
     display: flex;
     flex-direction: column;
@@ -706,7 +854,7 @@ input[type="radio"]:checked + .option-box {
   .regCompleteContent {
     width: 100%;
     background-color: #fff;
-    padding: 4rem;
+    padding: 1rem;
     flex-direction: column;
   }
   .forgotPw {
@@ -727,7 +875,7 @@ input[type="radio"]:checked + .option-box {
   .forgotPWform input {
     width: 80%;
   }
-  .createAccountDetails{
+  .createAccountDetails {
     flex-direction: column;
   }
   .createAccount {
@@ -742,7 +890,6 @@ input[type="radio"]:checked + .option-box {
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-
   }
   #createAccountForm {
     justify-content: center;
