@@ -256,6 +256,11 @@ body {
 }
 .companyDescription {
   margin: 3rem 0;
+
+}
+.row {
+  display: flex;
+  flex-direction: column;
 }
 .browseBtn {
   background-color: #ff8c00;
@@ -325,7 +330,7 @@ body {
 .regCompleteContent {
   width: 60%;
   background-color: #fff;
-  padding: 4rem;
+  padding: 1rem 4rem;
 }
 .progress-bar {
   display: flex;
